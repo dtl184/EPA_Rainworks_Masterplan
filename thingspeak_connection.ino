@@ -43,7 +43,7 @@ void loop() {
   int valueA0 = analogRead(A0);
 
   // Write value to Field 1 of a ThingSpeak Channel
-  int httpCode = ThingSpeak.writeField(myChannelNumber, 1, valueA0, myWriteAPIKey);
+  int httpCode = ThingSpeak.writeField(myChannelNumber, 2, valueA0, myWriteAPIKey);
 
   if (httpCode == 200) {
     Serial.println("Channel write successful.");
